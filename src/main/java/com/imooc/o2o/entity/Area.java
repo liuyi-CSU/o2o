@@ -2,6 +2,10 @@ package com.imooc.o2o.entity;
 
 import java.util.Date;
 
+/**区域
+ * @author liuyi
+ *
+ */
 public class Area {
 	private Integer areaId;
 	private String areaName;
