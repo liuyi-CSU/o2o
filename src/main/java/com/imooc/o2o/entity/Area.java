@@ -7,15 +7,15 @@ import java.util.Date;
  *
  */
 public class Area {
-	private Integer areaId;
+	private Long areaId;
 	private String areaName;
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
-	public Integer getAreaId() {
+	public Long getAreaId() {
 		return areaId;
 	}
-	public void setAreaId(Integer areaId) {
+	public void setAreaId(Long areaId) {
 		this.areaId = areaId;
 	}
 	public String getAreaName() {
