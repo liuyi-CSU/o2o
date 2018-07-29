@@ -35,7 +35,7 @@ public class ShopServiceTest extends BaseTest{
 		shop.setShopName("mytest1");
 		shop.setShopDesc("mytest1");
 		shop.setShopAddr("testaddr1");
-		shop.setPhone("13810524526");
+		shop.setPhone("13310524526");
 		shop.setCreateTime(new Date());
 		shop.setEnableStatus(ShopStateEnum.CHECK.getState());
 		shop.setAdvice("审核中");

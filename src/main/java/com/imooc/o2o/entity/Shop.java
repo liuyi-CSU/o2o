@@ -19,11 +19,21 @@ public class Shop {
 	private Date lastEditTime;
 	private Integer enableStatus;
 	private String advice;
+	
+	private PersonInfo owner;
 
 	private List<ShopAuthMap> staffList;
 	private Area area;
 	private ShopCategory shopCategory;
 	private ShopCategory parentCategory;
+
+	public PersonInfo getOwner() {
+		return owner;
+	}
+
+	public void setOwner(PersonInfo owner) {
+		this.owner = owner;
+	}
 
 	public Long getShopId() {
 		return shopId;

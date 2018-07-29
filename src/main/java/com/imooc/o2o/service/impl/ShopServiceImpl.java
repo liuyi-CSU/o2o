@@ -36,7 +36,7 @@ public class ShopServiceImpl implements ShopService {
 			int effectedNum = shopDao.insertShop(shop);
 			// 先判断插入是否成功
 			if (effectedNum <= 0) {
-				// 只要抛出ShopOperationException事务才会终止，如果是抛出Exception则事务没法终止
+				// 只有抛出ShopOperationException事务才会终止，如果是抛出Exception则事务没法终止
 				throw new ShopOperationException("店铺创建失败");
 			} else {
 				if (shopImg != null) {
@@ -50,6 +50,12 @@ public class ShopServiceImpl implements ShopService {
 					effectedNum = shopDao.updateShop(shop);
 					if (effectedNum <= 0) {
 						throw new ShopOperationException("更新图片地址失败");
+					} else {
+						if (shopImg != null) {
+							// 存储图片
+							addShopImg(shop, shopImg);
+							shop.getShopId();
+						}
 					}
 				}
 			}
@@ -62,7 +68,7 @@ public class ShopServiceImpl implements ShopService {
 		// 获取shop图片目录的相对值路径
 		String dest = PathUtil.getShopImagePath(shop.getShopId());
 		String shopImgAddr = ImageUtil.generateThumbnail(shopImg, dest);
-		
+		shop.setShopImg(shopImgAddr);
 	}
 
 }

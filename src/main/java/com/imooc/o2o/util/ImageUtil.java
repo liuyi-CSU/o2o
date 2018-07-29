@@ -27,7 +27,7 @@ public class ImageUtil {
 		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
 		try {
 			Thumbnails.of(thumbnail).size(200, 200)
-			.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
+			.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "watermark.jpg")), 0.25f)
 			.outputQuality(0.8f).toFile(dest);
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -61,7 +61,7 @@ public class ImageUtil {
 	 * 生成随机文件名，当前年月日小时分钟+五位随机数
 	 * @return
 	 */
-	private static String getRandomFileName() {
+	public static String getRandomFileName() {
 		// 获取随机五位数
 		int rannum = r.nextInt(89999) + 10000;
 		String nowTimeStr = sDateFormat.format(new Date());
