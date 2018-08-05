@@ -14,7 +14,7 @@ public class ShopCategory {
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
-	private ShopCategory parent;
+	private ShopCategory parentId;
 	public Long getShopCategoryId() {
 		return shopCategoryId;
 	}
@@ -57,11 +57,11 @@ public class ShopCategory {
 	public void setLastEditTime(Date lastEditTime) {
 		this.lastEditTime = lastEditTime;
 	}
-	public ShopCategory getParent() {
-		return parent;
+	public ShopCategory getParentId() {
+		return parentId;
 	}
-	public void setParent(ShopCategory parent) {
-		this.parent = parent;
+	public void setParentId(ShopCategory parentId) {
+		this.parentId = parentId;
 	}
 
 }
