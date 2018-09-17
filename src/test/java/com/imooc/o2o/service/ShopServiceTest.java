@@ -44,7 +44,7 @@ public class ShopServiceTest extends BaseTest{
 		shop.setAdvice("审核中");
 		File shopImg = new File("/Users/liuyi/Pictures/IMG_9898.jpg");
 		InputStream is = new FileInputStream(shopImg);
-		ShopExecution se = shopService.addShop(shop, is, shopImg.getName());
-		assertEquals(ShopStateEnum.CHECK.getState(), se.getState());
+//		ShopExecution se = shopService.addShop(shop, is, shopImg.getName());
+//		assertEquals(ShopStateEnum.CHECK.getState(), se.getState());
 	}
 }
