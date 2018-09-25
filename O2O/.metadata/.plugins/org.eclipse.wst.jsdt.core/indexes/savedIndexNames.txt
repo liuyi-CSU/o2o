@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/liuyi/Documents/workspace/O2O/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3717824629.index
+4281837330.index
+2867053777.index
+3395737123.index
+3050699603.index
+2503375966.index
